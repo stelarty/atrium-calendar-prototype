@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Календарь — Атриум</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="calendar">
+      <div class="filters">
+        <div class="filters-left">
+          <div class="nav-buttons">
+            <button class="icon-btn" type="button" aria-label="Предыдущая неделя">
+              <img src="assets/chevron-left.svg" alt="" />
+            </button>
+            <button class="icon-btn" type="button" aria-label="Следующая неделя">
+              <img src="assets/chevron-right.svg" alt="" />
+            </button>
+          </div>
+          <h1 class="title">01 - 07 июня</h1>
+        </div>
+        <div class="segment">
+          <button class="seg-item active" type="button">Все типы</button>
+          <button class="seg-item" type="button">Занятия</button>
+          <button class="seg-item" type="button">Домашние задания</button>
+        </div>
+        <button class="courses-btn" type="button">
+          <span>Все курсы</span>
+          <img src="assets/chevron-down.svg" alt="" />
+        </button>
+      </div>
+
+      <div class="grid">
+        <div class="grid-head">
+          <div class="head-utc">UTC+3</div>
+          <div class="head-cell">Пн, 01</div>
+          <div class="head-cell">Вт, 02</div>
+          <div class="head-cell">Ср, 03</div>
+          <div class="head-cell"><span class="head-day">Чт, 04</span><span class="today-dot"></span></div>
+          <div class="head-cell">Пт, 05</div>
+          <div class="head-cell">Сб, 06</div>
+          <div class="head-cell">Вс, 07</div>
+        </div>
+
+        <!-- 8:00 -->
+        <div class="row">
+          <div class="time-cell">8:00</div>
+          <div class="cell">
+            <div class="lesson-card card-additional">
+              <p class="card-type">Занятие</p>
+              <p class="card-title">Комбинаторика: сумма и произведение</p>
+              <p class="card-time">8:00 - 9:00</p>
+            </div>
+          </div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell today"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <!-- 9:00 -->
+        <div class="row">
+          <div class="time-cell">9:00
+            <div class="now-badge">9:35</div>
+          </div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell today"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <!-- 10:00 -->
+        <div class="row">
+          <div class="time-cell">10:00</div>
+          <div class="cell">
+            <div class="lesson-card card-additional">
+              <p class="card-type">Занятие</p>
+              <p class="card-title">Механизмы нуклеофильного замещения – II. Их применение в химии спиртов, галогеналканов, аминов, простых эфиров</p>
+              <p class="card-time">10:00 - 11:00</p>
+            </div>
+          </div>
+          <div class="cell"></div>
+          <div class="cell cell-split">
+            <div class="lesson-card card-additional">
+              <p class="card-type">Дедлайн</p>
+              <p class="card-title">Комбинаторика: сумма и произведение</p>
+              <p class="card-time">10:00</p>
+            </div>
+            <div class="lesson-card card-additional">
+              <p class="card-type">Дедлайн</p>
+              <p class="card-title">Комбинаторика: сумма и произведение</p>
+              <p class="card-time">10:00</p>
+            </div>
+          </div>
+          <div class="cell today"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <!-- 11:00 -->
+        <div class="row">
+          <div class="time-cell">11:00</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell today"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <!-- 12:00 -->
+        <div class="row">
+          <div class="time-cell">12:00</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell cell-tall">
+            <div class="lesson-card card-warning">
+              <p class="card-type">Отслушка</p>
+              <p class="card-title">Комбинаторика: сумма и произведение</p>
+              <p class="card-time">12:00 - 13:00</p>
+            </div>
+          </div>
+          <div class="cell today"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <!-- 13:00 -->
+        <div class="row">
+          <div class="time-cell">13:00</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell today"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <!-- 14:00 -->
+        <div class="row">
+          <div class="time-cell">14:00</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell today"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <!-- 15:00 -->
+        <div class="row">
+          <div class="time-cell">15:00</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell today"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <!-- 16:00 -->
+        <div class="row">
+          <div class="time-cell">16:00</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell today"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <!-- 17:00 -->
+        <div class="row">
+          <div class="time-cell">17:00</div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell today"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+
+        <div class="now-line"></div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <img src="assets/logo.svg" alt="Атриум" />
+    </footer>
+  </div>
+
+  <button class="help-btn" type="button" aria-label="Помощь">
+    <img src="assets/question.svg" alt="" />
+  </button>
+</body>
+</html>
