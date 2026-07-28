@@ -119,15 +119,18 @@ function scrollToNow() {
   gridScroll.scrollTop = Math.max(0, top - gridScroll.clientHeight / 2);
 }
 
-document.getElementById('prev-week').addEventListener('click', () => {
-  weekStart.setDate(weekStart.getDate() - 7);
+function shiftWeek(days) {
+  weekStart.setDate(weekStart.getDate() + days);
   render();
-});
+  if (isSameDay(mondayOf(new Date()), weekStart)) {
+    scrollToNow();
+  } else {
+    gridScroll.scrollTop = 0;
+  }
+}
 
-document.getElementById('next-week').addEventListener('click', () => {
-  weekStart.setDate(weekStart.getDate() + 7);
-  render();
-});
+document.getElementById('prev-week').addEventListener('click', () => shiftWeek(-7));
+document.getElementById('next-week').addEventListener('click', () => shiftWeek(7));
 
 document.getElementById('segment').addEventListener('click', (e) => {
   const btn = e.target.closest('.seg-item');
@@ -141,3 +144,4 @@ setInterval(() => {
 
 render();
 scrollToNow();
+window.addEventListener('load', scrollToNow);
